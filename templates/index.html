@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <header>
+        <h1 class="title is-3">Conversor de Moedas | Python</h1>
+    </header>
+    <main class="container">
+        <form action="" method="post">
+            <div>
+                <input class="input" type="number" placeholder="Digite o valor..." name="valor" id="valor" required>
+                <span class="select is-info">
+                    <select name="currency">
+                        {% for currency in currency_simbol %}
+                            <option value="{{ currency.simbolo }}">{{ currency.nomeFormatado }}</option>
+                        {% endfor %}
+                    </select>
+                </span>
+            </div>
+            <div>
+                <button class="button is-primary" id="button" disabled="true">Submit</button>
+            </div>
+        </form>
+        <div class="box">
+            <p id="result">{{result}}</p>
+        </div>
+    </main>
+</body>
+<script src="{{url_for('static', filename='script/script.js')}}"></script>
+</html>
