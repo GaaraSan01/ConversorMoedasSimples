@@ -15,7 +15,14 @@
     <main class="container">
         <form action="" method="post">
             <div>
-                <input class="input" type="number" placeholder="Digite o valor..." name="valor" id="valor" required>
+                <input 
+                    class="input" 
+                    type="number" 
+                    placeholder="Digite o valor..." 
+                    name="valor" id="valor" 
+                    required
+                    autocomplete="off"
+                >
                 <span class="select is-info">
                     <select name="currency">
                         {% for currency in currency_simbol %}
