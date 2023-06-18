@@ -1,5 +1,4 @@
 import requests
-import pprint
 
 BASE_URL_CURRENCY = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=1000&$format=json'
 BASE_URL_COTATION = 'https://economia.awesomeapi.com.br/last/'
